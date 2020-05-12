@@ -22,17 +22,17 @@ public class AppMenu {
         System.out.print("Second number: ");
         int y = Integer.parseInt(input.next());
         System.out.print("Operator: ");
-        String op = input.next();
+        char op = input.next().charAt(0);
 
         int z = 0;
 
-        if (op.equals("+")) {
+        if (op == '+') {
             z = x + y;
-        } else if (op.equals("-")) {
+        } else if (op == '-') {
             z = x - y;
-        } else if (op.equals("*")) {
+        } else if (op == '*') {
             z = x * y;
-        } else if (op.equals("/")) {
+        } else if (op == '/') {
             z = x / y;
         } else {
             throw new Exception("Operator not recognized");
