@@ -24,16 +24,23 @@ public class AppMenu {
 
         int z = 0;
 
-        if (op == '+') {
-            z = x + y;
-        } else if (op == '-') {
-            z = x - y;
-        } else if (op == '*') {
-            z = x * y;
-        } else if (op == '/') {
-            z = x / y;
-        } else {
-            throw new Exception("Operator not recognized");
+        switch(op) {
+        case '+':
+        	z = x + y;
+        	break;
+        case '-':
+        	z = x - y;
+        	break;
+        case '*':
+        	z = x * y;
+        	break;
+        case '/':
+        	if(y != 0)
+        		z = x / y;
+        	else throw new IllegalArgumentException("Cannot divide by zero!");
+        	break;
+        default:
+        	throw new Exception("Operator not recognized");
         }
         System.out.println("Result: " + z);
     }
