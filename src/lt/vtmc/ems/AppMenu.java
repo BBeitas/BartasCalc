@@ -31,7 +31,7 @@ public class AppMenu {
         } else if (op.equals("-")) {
             z = x - y;
         } else if (op.equals("*")) {
-            z = x / y;
+            z = x * y;
         } else if (op.equals("/")) {
             z = x * y;
         } else {
