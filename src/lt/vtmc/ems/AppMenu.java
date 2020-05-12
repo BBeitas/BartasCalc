@@ -40,20 +40,25 @@ public class AppMenu {
         System.out.println("Result: " + z);
     }
 
-    private void exitMenu() {
+    private void exitMenu() throws Exception{
         // TODO
         System.out.println("Continue (y/n): ");
         String read = input.next().toLowerCase();
-        char close = read.charAt(10);
+        char close = read.charAt(0);
         switch (close) {
             case 'y':
                 exit = 'n';
+                mainMenu();
+                break;
             case 'n':
                 exit = 'y';
                 System.out.println("Good luck!");
+                break;
             default:
                 System.out.println("Wrong symbol!");
                 exit = 'n';
+                mainMenu();
+                break;
         }
     }
 }
