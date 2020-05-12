@@ -39,6 +39,11 @@ public class AppMenu {
         		z = x / y;
         	else throw new IllegalArgumentException("Cannot divide by zero!");
         	break;
+        case '%':
+        	if(y != 0)
+        		z = x % y;
+        	else throw new IllegalArgumentException("Cannot divide by zero!");
+        	break;
         default:
         	throw new Exception("Operator not recognized");
         }
